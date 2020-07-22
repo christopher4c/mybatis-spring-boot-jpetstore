@@ -26,31 +26,31 @@
     <section layout:fragment="content">
 
         <div id="BackLink">
-            <a th:href="@{/catalog}">Return to Main Menu</a>
+            <a th:href="@{/catalog}">Volver al menú principal</a>
         </div>
 
         <div id="Catalog">
 
             <div id="Cart">
 
-                <h2>Shopping Cart</h2>
+                <h2>Carrito de compras</h2>
 
                 <form th:action="@{/cart}" th:object="${cartUpdateForm}" method="post">
                     <table>
                         <tr>
-                            <th>Item ID</th>
-                            <th>Product ID</th>
-                            <th>Description</th>
-                            <th>In Stock?</th>
-                            <th>Quantity</th>
-                            <th>List Price</th>
-                            <th>Total Cost</th>
+                            <th>Item</th>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>¿En stock?</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Costo Total</th>
                             <th>&nbsp;</th>
                         </tr>
 
                         <tr th:if="${#lists.isEmpty(@cart.cartItems)}">
                             <td colspan="8">
-                                <b>Your cart is empty.</b>
+                                <b>Tu carrito esta vacío.</b>
                             </td>
                         </tr>
 
@@ -108,15 +108,15 @@
                 </form>
 
                 <a th:href="@{/my/orders/create(form)}" class="Button" th:if="${!#lists.isEmpty(@cart.cartItems)}">
-                    Proceed to Checkout
+                    Pasar por caja
                 </a>
 
             </div>
 
             <div id="MyList">
                 <div sec:authorize="isAuthenticated()" th:if="${!#lists.isEmpty(@favourite.productList)}">
-                    <p>Pet Favorites <br/>
-                        Shop for more of your favorite pets here.</p>
+                    <p>Mascotas Favoritas <br/>
+                        Compre más de sus mascotas favoritas aquí.</p>
                     <ul>
                         <li th:each="product : ${@favourite.productList}">
                             <a th:href="@{/catalog/products/{productId}(productId=${product.productId})}">
