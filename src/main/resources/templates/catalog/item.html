@@ -25,7 +25,7 @@
     <section layout:fragment="content">
 
         <div id="BackLink">
-            <a th:href="@{/catalog/products/{productId}(productId=${item.product.productId})}">Return to <span th:text="${item.product.productId}"></span></a>
+            <a th:href="@{/catalog/products/{productId}(productId=${item.product.productId})}">Volver a <span th:text="${item.product.productId}"></span></a>
         </div>
 
         <div id="Catalog">
@@ -60,10 +60,10 @@
                 </tr>
                 <tr>
                     <td th:if="${item.quantity le 0}">
-                            Back ordered.
+                            Volver a ordenar.
                    </td>
                     <td th:if="${item.quantity gt 0}">
-                        <span th:text="${item.quantity}"></span> in stock.
+                        <span th:text="${item.quantity}"></span> En stock.
                     </td>
                 </tr>
                 <tr>
@@ -75,7 +75,7 @@
                 <tr>
                     <td>
                         <a th:href="@{/cart(add,itemId=${item.itemId})}" class="Button">
-                            Add to Cart
+                            Agregar al carrito
                         </a>
                     </td>
                 </tr>
