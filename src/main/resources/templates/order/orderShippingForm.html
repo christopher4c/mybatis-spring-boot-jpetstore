@@ -31,60 +31,60 @@
 
                 <table>
                     <tr>
-                        <th colspan=2>Shipping Address</th>
+                        <th colspan=2>Dirección de envío</th>
                     </tr>
 
                     <tr>
-                        <td>First name:</td>
+                        <td>Nombre:</td>
                         <td>
                             <input th:field="*{shipToFirstName}"/>
                             <div th:errors="*{shipToFirstName}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Last name:</td>
+                        <td>Apellido:</td>
                         <td>
                             <input th:field="*{shipToLastName}"/>
                             <div th:errors="*{shipToLastName}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Address 1:</td>
+                        <td>Dirección 1:</td>
                         <td>
                             <input size="40" th:field="*{shipAddress1}"/>
                             <div th:errors="*{shipAddress1}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Address 2:</td>
+                        <td>Dirección 2:</td>
                         <td>
                             <input size="40" th:field="*{shipAddress2}"/>
                             <div th:errors="*{shipAddress2}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>City:</td>
+                        <td>Ciudad:</td>
                         <td>
                             <input th:field="*{shipCity}"/>
                             <div th:errors="*{shipCity}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>State:</td>
+                        <td>Estado:</td>
                         <td>
                             <input size="4" th:field="*{shipState}"/>
                             <div th:errors="*{shipState}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Zip:</td>
+                        <td>Código postal:</td>
                         <td>
                             <input size="10" th:field="*{shipZip}"/>
                             <div th:errors="*{shipZip}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Country:</td>
+                        <td>País:</td>
                         <td>
                             <input size="15" th:field="*{shipCountry}"/>
                             <div th:errors="*{shipCountry}" class="fieldError"></div>
@@ -93,7 +93,7 @@
 
                 </table>
 
-                <input type="submit" name="confirm" value="Confirm"/>
+                <input type="submit" name="confirm" value="Confirmar"/>
 
             </form>
         </div>
