@@ -25,23 +25,23 @@
     <section layout:fragment="content">
 
         <div id="BackLink">
-            <a th:href="@{/catalog}">Return to Main Menu</a>
+            <a th:href="@{/catalog}">Volver al menú principal</a>
         </div>
 
         <div id="Catalog">
 
-            <h2 th:text="${category.name}">Birds</h2>
+            <h2 th:text="${category.name}">Aves</h2>
 
             <table>
                 <tr>
-                    <th>Product ID</th>
-                    <th>Name</th>
+                    <th>Producto ID</th>
+                    <th>Nombre</th>
                 </tr>
                 <tr th:each="product : ${productList}">
                     <td>
                         <a th:href="@{/catalog/products/{productId}(productId=${product.productId})}" th:text="${product.productId}">AV-CB-01</a>
                     </td>
-                    <td th:text="${product.name}">Amazon Parrot</td>
+                    <td th:text="${product.name}">Loro Amazonas</td>
                 </tr>
             </table>
 
