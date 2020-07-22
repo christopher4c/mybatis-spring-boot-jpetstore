@@ -26,7 +26,7 @@
 
         <div id="BackLink">
             <a th:href="@{/catalog}">
-                Return to Main Menu
+                Volver al menú principal
             </a>
         </div>
 
@@ -35,110 +35,110 @@
             <table>
                 <tr>
                     <th align="center" colspan="2">
-                        Order #<span id="orderId" th:text="${order.orderId}"></span>
+                        Orden #<span id="orderId" th:text="${order.orderId}"></span>
                         <span th:text="${#temporals.format(order.orderDate, 'yyyy/MM/dd HH:mm:ss')}"></span>
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="2">Payment Details</th>
+                    <th colspan="2">Detalles del pago</th>
                 </tr>
                 <tr>
-                    <td>Card Type:</td>
+                    <td>Tipo de tarjeta:</td>
                     <td><span th:text="${order.cardType}"></span></td>
                 </tr>
                 <tr>
-                    <td>Card Number:</td>
+                    <td>Número de tarjeta:</td>
                     <td><span th:text="${order.creditCard}"></span> * Fake number!</td>
                 </tr>
                 <tr>
-                    <td>Expiry Date (MM/YYYY):</td>
+                    <td>Fecha de caducidad (MM/YYYY):</td>
                     <td><span th:text="${order.expiryDate}"></span></td>
                 </tr>
                 <tr>
-                    <th colspan="2">Billing Address</th>
+                    <th colspan="2">Dirección de envío</th>
                 </tr>
                 <tr>
-                    <td>First name:</td>
+                    <td>Nombre:</td>
                     <td><span th:text="${order.billToFirstName}"></span></td>
                 </tr>
                 <tr>
-                    <td>Last name:</td>
+                    <td>Apellido:</td>
                     <td><span th:text="${order.billToLastName}"></span></td>
                 </tr>
                 <tr>
-                    <td>Address 1:</td>
+                    <td>Dirección 1:</td>
                     <td><span th:text="${order.billAddress1}"></span></td>
                 </tr>
                 <tr>
-                    <td>Address 2:</td>
+                    <td>Dirección 2:</td>
                     <td><span th:text="${order.billAddress2}"></span></td>
                 </tr>
                 <tr>
-                    <td>City:</td>
+                    <td>Ciudad:</td>
                     <td><span th:text="${order.billCity}"></span></td>
                 </tr>
                 <tr>
-                    <td>State:</td>
+                    <td>Estado:</td>
                     <td><span th:text="${order.billState}"></span></td>
                 </tr>
                 <tr>
-                    <td>Zip:</td>
+                    <td>Código postal:</td>
                     <td><span th:text="${order.billZip}"></span></td>
                 </tr>
                 <tr>
-                    <td>Country:</td>
+                    <td>País:</td>
                     <td><span th:text="${order.billCountry}"></span></td>
                 </tr>
                 <tr>
                     <th colspan="2">Shipping Address</th>
                 </tr>
                 <tr>
-                    <td>First name:</td>
+                    <td>Nombre:</td>
                     <td><span th:text="${order.shipToFirstName}"></span></td>
                 </tr>
                 <tr>
-                    <td>Last name:</td>
+                    <td>Apellido:</td>
                     <td><span th:text="${order.shipToLastName}"></span></td>
                 </tr>
                 <tr>
-                    <td>Address 1:</td>
+                    <td>Dirección 1:</td>
                     <td><span th:text="${order.shipAddress1}"></span></td>
                 </tr>
                 <tr>
-                    <td>Address 2:</td>
+                    <td>Dirección 2:</td>
                     <td><span th:text="${order.shipAddress2}"></span></td>
                 </tr>
                 <tr>
-                    <td>City:</td>
+                    <td>Ciudad:</td>
                     <td><span th:text="${order.shipCity}"></span></td>
                 </tr>
                 <tr>
-                    <td>State:</td>
+                    <td>Estado:</td>
                     <td><span th:text="${order.shipState}"></span></td>
                 </tr>
                 <tr>
-                    <td>Zip:</td>
+                    <td>Código postal:</td>
                     <td><span th:text="${order.shipZip}"></span></td>
                 </tr>
                 <tr>
-                    <td>Country:</td>
+                    <td>País:</td>
                     <td><span th:text="${order.shipCountry}"></span></td>
                 </tr>
                 <tr>
-                    <td>Courier:</td>
+                    <td>Mensajero:</td>
                     <td><span th:text="${order.courier}"></span></td>
                 </tr>
                 <tr>
-                    <td colspan="2">Status: <span th:text="${order.status}"></span></td>
+                    <td colspan="2">Estado: <span th:text="${order.status}"></span></td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <table>
                             <tr>
                                 <th>Item ID</th>
-                                <th>Description</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
+                                <th>Descripción</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
                                 <th>Total Cost</th>
                             </tr>
                             <tr th:each="orderLine : ${order.lines}">
