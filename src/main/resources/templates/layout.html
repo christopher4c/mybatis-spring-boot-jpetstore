@@ -46,14 +46,14 @@
             </a>
             <img align="middle" th:src="@{/images/separator.gif}" />
             <a th:href="@{/login}" sec:authorize="!isAuthenticated()">
-                Sign In
+                Iniciar sesión
             </a>
             <a th:href="@{/logout}" sec:authorize="${isAuthenticated()}">
-                Sign Out
+                Cerrar sesión
             </a>
             <img align="middle" th:src="@{/images/separator.gif}" sec:authorize="${isAuthenticated()}"/>
             <a th:href="@{/my/account/update(form)}" th:if="${true}" sec:authorize="${isAuthenticated()}">
-                My Account
+                Mi cuenta
             </a>
             <img align="middle" th:src="@{/images/separator.gif}" />
             <a th:href="@{/help.html}" target="help">
@@ -66,7 +66,7 @@
         <div id="SearchContent" th:if="${!isErrorResponse}">
             <form th:action="@{/catalog/products}" method="get" th:object="${@productSearchCriteria}">
                 <input name="keywords" size="14" th:value="${@productSearchCriteria.keywords}"/>
-                <input id="searchProducts" type="submit" value="Search" />
+                <input id="searchProducts" type="submit" value="Buscar" />
             </form>
         </div>
     </div>
