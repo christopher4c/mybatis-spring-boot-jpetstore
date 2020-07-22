@@ -29,24 +29,24 @@
 
             <form th:action="@{/my/account/update}" method="post" th:object="${accountForm}">
 
-                <h3>User Information</h3>
+                <h3>Información del usuario</h3>
 
                 <table>
                     <tr>
-                        <td>User ID:</td>
+                        <td>ID del usuario:</td>
                         <td>
                             <span sec:authentication="principal.account.username"></span>
                         </td>
                     </tr>
                     <tr>
-                        <td>New password:</td>
+                        <td>Nueva contraseña:</td>
                         <td>
                             <input type="password" th:field="*{password}"/>
                             <div th:errors="*{password}" class="fieldError"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Repeat password:</td>
+                        <td>Repita la contraseña:</td>
                         <td>
                             <input type="password" th:field="*{repeatedPassword}"/>
                             <div th:errors="*{repeatedPassword}" class="fieldError"></div>
@@ -57,12 +57,12 @@
                 <div th:include="account/flagments :: commonForm">
                 </div>
 
-                <input id="save" type="submit" value="Save Account Information"/>
+                <input id="save" type="submit" value="Guardar información"/>
 
             </form>
 
             <a th:href="@{/my/orders}">
-                My Orders
+                Mis ordenes
             </a>
 
         </div>
