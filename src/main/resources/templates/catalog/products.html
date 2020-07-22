@@ -26,7 +26,7 @@
 
 
         <div id="BackLink">
-            <a th:href="@{/catalog}">Return to Main Menu</a>
+            <a th:href="@{/catalog}">Volver al menú principal</a>
         </div>
 
         <div id="Catalog">
@@ -34,12 +34,12 @@
             <table>
                 <tr>
                     <th>&nbsp;</th>
-                    <th>Product ID</th>
-                    <th>Name</th>
+                    <th>Producto ID</th>
+                    <th>Nombre</th>
                 </tr>
                 <tr th:if="${#lists.isEmpty(productList)}">
                     <td colspan="3">
-                        <b>Products not found.</b>
+                        <b>No se encuentran productos.</b>
                     </td>
                 </tr>
                 <tr th:each="product : ${productList}">
@@ -51,7 +51,7 @@
                             AV-CB-01
                         </a>
                     </td>
-                    <td th:text="${product.name}">Amazon Parrot</td>
+                    <td th:text="${product.name}">Loro Amazonas</td>
                 </tr>
             </table>
 
