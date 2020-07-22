@@ -25,7 +25,7 @@
     <section layout:fragment="content">
 
         <div id="BackLink">
-            <a th:href="@{/catalog/categories/{categoryId}(categoryId=${product.categoryId})}">Return to <span th:text="${product.categoryId}"></span></a>
+            <a th:href="@{/catalog/categories/{categoryId}(categoryId=${product.categoryId})}">Volver a <span th:text="${product.categoryId}"></span></a>
         </div>
 
         <div id="Catalog">
@@ -35,9 +35,9 @@
             <table>
                 <tr>
                     <th>Item ID</th>
-                    <th>Product ID</th>
-                    <th>Description</th>
-                    <th>List Price</th>
+                    <th>Producto ID</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
                     <th>&nbsp;</th>
                 </tr>
                 <tr th:each="item : ${itemList}">
@@ -46,19 +46,19 @@
                     </td>
                     <td th:text="${item.product.productId}">AV-CB-01</td>
                     <td>
-                        <span th:text="${item.attribute1}">Adult</span>
-                        <span th:text="${item.attribute2}">Male</span>
+                        <span th:text="${item.attribute1}">Adulto</span>
+                        <span th:text="${item.attribute2}">Masculino</span>
                         <span th:text="${item.attribute3}"></span>
                         <span th:text="${item.attribute4}"></span>
                         <span th:text="${item.attribute5}"></span>
-                        <span th:text="${product.name}">Amazon Parrot</span>
+                        <span th:text="${product.name}">Loro Amazonas</span>
                     </td>
                     <td>
                         $<span th:text="${#numbers.formatDecimal(item.listPrice, 1, 'COMMA', 2, 'POINT')}">193.50</span>
                     </td>
                     <td>
                         <a th:href="@{/cart(add,itemId=${item.itemId})}" class="Button">
-                            Add to Cart
+                            Agregar al carrito
                         </a>
                     </td>
                 </tr>
