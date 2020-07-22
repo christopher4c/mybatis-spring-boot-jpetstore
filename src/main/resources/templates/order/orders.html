@@ -26,17 +26,17 @@
 
         <div id="Catalog">
 
-            <h2>My Orders</h2>
+            <h2>Mis ordenes</h2>
 
             <table>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Date</th>
-                    <th>Total Price</th>
+                    <th>Orden ID</th>
+                    <th>Fecha</th>
+                    <th>Precio total</th>
                 </tr>
                 <tr th:if="${#lists.isEmpty(orderList)}">
                     <td colspan="3">
-                        Order not found.
+                        No se encuentran ordenes.
                     </td>
                 </tr>
                 <tr th:each="order : ${orderList}">
