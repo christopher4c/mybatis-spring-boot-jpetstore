@@ -47,12 +47,12 @@ public class ApplicationConfig {
 
   @Bean
   List<String> clCategories() {
-    return Arrays.asList("FISH", "DOGS", "REPTILES", "CATS", "BIRDS");
+    return Arrays.asList("PECES", "PERROS", "REPTILES", "GATOS", "AVES");
   }
 
   @Bean
   List<String> clLanguages() {
-		return Arrays.asList("English", "Japanese");
+		return Arrays.asList("Español");
   }
 
 }
