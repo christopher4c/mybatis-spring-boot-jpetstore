@@ -32,7 +32,7 @@ public class ApplicationConfig {
 
   @Bean
   Clock clock() {
-      return Clock.systemDefaultZone();
+    return Clock.systemDefaultZone();
   }
 
   @Bean
@@ -45,14 +45,22 @@ public class ApplicationConfig {
     return Arrays.asList("Visa", "MasterCard", "American Express");
   }
 
+  //@Bean
+  //List<String> clCategories() {
+  //  return Arrays.asList("FISH", "DOGS", "REPTILES", "CATS", "BIRDS");
+  //}
   @Bean
   List<String> clCategories() {
-    return Arrays.asList("FISH", "DOGS", "REPTILES", "CATS", "BIRDS");
+    return Arrays.asList("PECES", "PERROS", "REPTILES", "GATOS", "AVES");
   }
 
+  //@Bean
+  //List<String> clLanguages() {
+  //		return Arrays.asList("English", "Japanese");
+  //}
   @Bean
   List<String> clLanguages() {
-		return Arrays.asList("English", "Japanese");
+    return Arrays.asList("Español");
   }
 
 }
