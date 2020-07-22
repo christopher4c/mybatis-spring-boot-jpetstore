@@ -21,18 +21,18 @@
 <body>
 
 <div th:fragment="commonForm">
-    <h3>Account Information</h3>
+    <h3>Información de la cuenta</h3>
 
     <table>
         <tr>
-            <td>First name:</td>
+            <td>Nombre:</td>
             <td>
                 <input th:field="*{firstName}"/>
                 <div th:errors="*{firstName}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Last name:</td>
+            <td>Apellido:</td>
             <td>
                 <input th:field="*{lastName}"/>
                 <div th:errors="*{lastName}" class="fieldError"></div>
@@ -46,49 +46,49 @@
             </td>
         </tr>
         <tr>
-            <td>Phone:</td>
+            <td>Teléfono:</td>
             <td>
                 <input th:field="*{phone}"/>
                 <div th:errors="*{phone}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Address 1:</td>
+            <td>Dirección 1:</td>
             <td>
                 <input size="40" th:field="*{address1}"/>
                 <div th:errors="*{address1}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Address 2:</td>
+            <td>Dirección 2:</td>
             <td>
                 <input size="40" th:field="*{address2}"/>
                 <div th:errors="*{address2}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>City:</td>
+            <td>Ciudad:</td>
             <td>
                 <input th:field="*{city}"/>
                 <div th:errors="*{city}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>State:</td>
+            <td>Estado:</td>
             <td>
                 <input size="4" th:field="*{state}"/>
                 <div th:errors="*{state}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Zip:</td>
+            <td>Código Postal:</td>
             <td>
                 <input size="10" th:field="*{zip}"/>
                 <div th:errors="*{zip}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Country:</td>
+            <td>País:</td>
             <td>
                 <input size="15" th:field="*{country}"/>
                 <div th:errors="*{country}" class="fieldError"></div>
@@ -96,11 +96,11 @@
         </tr>
     </table>
 
-    <h3>Profile Information</h3>
+    <h3>Información del Perfil</h3>
 
     <table>
         <tr>
-            <td>Language Preference:</td>
+            <td>Idioma:</td>
             <td>
                 <select th:field="*{languagePreference}">
                     <option th:each="language : ${@clLanguages}"
@@ -111,7 +111,7 @@
             </td>
         </tr>
         <tr>
-            <td>Favourite Category:</td>
+            <td>Categoría favorita:</td>
             <td>
                 <select th:field="*{favouriteCategoryId}">
                     <option th:each="category : ${@clCategories}"
@@ -122,14 +122,14 @@
             </td>
         </tr>
         <tr>
-            <td>Enable MyList:</td>
+            <td>Habilitar lista:</td>
             <td>
                 <input type="checkbox" th:field="*{listOption}"/>
                 <div th:errors="*{listOption}" class="fieldError"></div>
             </td>
         </tr>
         <tr>
-            <td>Enable MyBanner:</td>
+            <td>Habilitar banner:</td>
             <td>
                 <input type="checkbox" th:field="*{bannerOption}"/>
                 <div th:errors="*{bannerOption}" class="fieldError"></div>
